@@ -60,12 +60,12 @@ export default [
   },
 
   {
-    questao: `Em que continente está localizada a maior parte da Amazônia?`,
+    questao: `Qual é o nome da maior cadeia montanhosa do mundo?`,
     alternativas: [
-      { opcao:"América do Sul", correto: true},
-      { opcao:"América do Norte", correto: false},
-      { opcao:"América Central", correto: false},
-      { opcao:"Caribe", correto: false}
+      { opcao:"Codilheira Australiana", correto: false},
+      { opcao:"Codilheira dos Andes", correto: false},
+      { opcao:"Codilheira do Himalaia", correto: true},
+      { opcao:"Montanhas Rochosas", correto: false}
     ]
   },
 
