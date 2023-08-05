@@ -1,7 +1,7 @@
 import questoes, {  } from "./questoes.js";
 
 const main = document.querySelector("main");
-const inicio = document.getElementById("inicio");
+const inicio = document.querySelector(".inicio");
 const btnIniciar = document.getElementById("iniciar");
 const questao = document.getElementById("questao");
 const numQuestao = document.getElementById("num-questao");
@@ -20,12 +20,12 @@ btnIniciar.addEventListener("click", () => {
 
 
 function carregarQuestao() {
-    const divQuestoes = document.createElement("div");
-    divQuestoes.className = "questoes";
+    const divQuestoes = document.querySelector(".questoes");
+    divQuestoes.style.display = "block";
     const item = questoes[questAtual];
     divQuestoes.innerHTML = `<h3 class="text-center num-questao">Questão ${questAtual + 1} de 10</h3>
                              <h4 class="questao">${item.questao}</h4>`;
-    const divAlternativas = document.createElement("divAlternativas");
+    const divAlternativas = document.createElement("div");
     divAlternativas.className = "alternativas list-group";
     divAlternativas.innerHTML = ``;
     item.alternativas.forEach((alternativa) => {
@@ -37,28 +37,13 @@ function carregarQuestao() {
 
         divAlternativas.appendChild(btn);
     })
-    main.appendChild(divQuestoes);
-    divQuestoes.appendChild(divAlternativas)
-/*
-    const item = questoes[questAtual];
-    alternativas.innerHTML = "";
-    questao.innerHTML = item.questao;
-
-    item.alternativas.forEach((alternativa) => {
-
-        const ul = document.createElement("ul").classList.add('alternativas list-group');
-
-        ul.innerHTML = `<li class="list-group-item" alt-certo="${alternativa.correto}">${alternativa.opcao}</li>`
-
-        alternativas.appendChild(ul);
-    });
-
-    */
-}
-
-document.querySelectorAll(".alternativas li").forEach((item) => {
+    divQuestoes.appendChild(divAlternativas);
+    document.querySelectorAll(".alternativas button").forEach((item) => {
     item.addEventListener("click", proxQuestao);
 })
+}
+
+
 
 function proxQuestao(e) {
     if(e.target.getAttribute("data-correto") == "true"){

@@ -6,8 +6,12 @@ main h2 {
     font-size: 1.2rem !important;
 }
 
-#inicio, .questoes, .final {
+.inicio, .questoes, .final {
     min-width: 30em;
+}
+
+.questoes, .final{
+    display: none;
 }
 
 .questoes h3{
@@ -24,7 +28,7 @@ main h2 {
 }
 
 @media only screen and (max-width: 600px) {
-    #inicio, .questoes, .final {
+    .inicio, .questoes, .final {
         min-width: 100%;
     }
 
