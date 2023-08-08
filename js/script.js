@@ -8,6 +8,10 @@ const numQuestao = document.getElementById("num-questao");
 // const alternativas = document.querySelector(".alternativas");
 const anterior = document.getElementById("anterior");
 const seguinte = document.getElementById("seguinte");
+const textoFinal = document.querySelector(".final h4");
+const divQuestoes = document.querySelector(".questoes");
+const divFinal = document.querySelector(".final");
+
 
 let questAtual = 0;
 let respCorretas = 0;
@@ -20,7 +24,6 @@ btnIniciar.addEventListener("click", () => {
 
 
 function carregarQuestao() {
-    const divQuestoes = document.querySelector(".questoes");
     divQuestoes.style.display = "block";
     const item = questoes[questAtual];
     divQuestoes.innerHTML = `<h3 class="text-center num-questao">Questão ${questAtual + 1} de 10</h3>
@@ -39,17 +42,32 @@ function carregarQuestao() {
     })
     divQuestoes.appendChild(divAlternativas);
     document.querySelectorAll(".alternativas button").forEach((item) => {
-    item.addEventListener("click", proxQuestao);
+
+    item.addEventListener("click", () => {
+              
+        if (item.getAttribute("data-certo") == "true") {
+            item.classList.remove("btn-light");
+            item.classList.add("btn-success");
+            respCorretas++;
+        }  else {
+            item.classList.remove("btn-light");
+            item.classList.add("btn-danger");
+        }
+        
+            const otherBtns = document.querySelectorAll(".btn-light");
+            for(let btn of otherBtns){
+                btn.disabled = true;
+            }
+        
+            setTimeout(proxQuestao, 1000)
+
+    });
 })
 }
 
 
 
-function proxQuestao(e) {
-    if(e.target.getAttribute("data-correto") == "true"){
-        respCorretas++;
-    }
-
+function proxQuestao() {
     if(questAtual < questoes.length - 1){
         questAtual++;
         carregarQuestao();
@@ -60,6 +78,6 @@ function proxQuestao(e) {
 
 function resultado(){
     textoFinal.innerHTML= `Você acertou ${respCorretas} de ${questoes.length}!`
-    content.style.display = 'none';
-    contentFinish.style = "flex";
+    divQuestoes.style.display = 'none';
+    divFinal.style.display = "block";
 }
