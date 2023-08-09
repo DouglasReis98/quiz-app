@@ -2,6 +2,10 @@
     height: 100vh;
 }
 
+main {
+    width: 32rem;
+}
+
 main h2 {
     font-size: 1.2rem !important;
 }
@@ -12,6 +16,9 @@ main h2 {
 
 .questoes, .final{
     display: none;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
 }
 
 .questoes h3{
