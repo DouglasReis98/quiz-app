@@ -1,17 +1,18 @@
 import questoes, {  } from "./questoes.js";
 
-const main = document.querySelector("main");
+//const main = document.querySelector("main");
 const inicio = document.querySelector(".inicio");
 const btnIniciar = document.getElementById("iniciar");
-const questao = document.getElementById("questao");
-const numQuestao = document.getElementById("num-questao");
+//const questao = document.getElementById("questao");
+//const numQuestao = document.getElementById("num-questao");
 // const alternativas = document.querySelector(".alternativas");
-const anterior = document.getElementById("anterior");
-const seguinte = document.getElementById("seguinte");
+//const anterior = document.getElementById("anterior");
+//const seguinte = document.getElementById("seguinte");
 const divQuestoes = document.querySelector(".questoes");
 const divFinal = document.querySelector(".final");
 const btnReiniciar = document.getElementById("reiniciar")
 
+let questCount = 0;
 let questAtual = 0;
 let respCorretas = 0;
 
@@ -24,8 +25,9 @@ btnIniciar.addEventListener("click", () => {
 
 function carregarQuestao() {
     divQuestoes.style.display = "flex";
+    //questAtual = 0;
     const item = questoes[questAtual];
-    divQuestoes.innerHTML = `<h3 class="text-center num-questao">Questão ${questAtual + 1} de 10</h3>
+    divQuestoes.innerHTML = `<h3 class="text-center num-questao">Questão ${questCount + 1} de 10</h3>
                              <h4 class="questao">${item.questao}</h4>`;
     const divAlternativas = document.createElement("div");
     divAlternativas.className = "alternativas list-group";
@@ -42,15 +44,19 @@ function carregarQuestao() {
     divQuestoes.appendChild(divAlternativas);
     document.querySelectorAll(".alternativas button").forEach((item) => {
 
+    const revelaCorreta = divAlternativas.querySelector(".btn[data-certo=true]");
+
     item.addEventListener("click", () => {
               
-        if (item.getAttribute("data-certo") == "true") {
+        if (item.dataset.certo == "true") {
             item.classList.remove("btn-light");
             item.classList.add("btn-success");
             respCorretas++;
         }  else {
             item.classList.remove("btn-light");
             item.classList.add("btn-danger");
+            revelaCorreta.classList.remove("btn-light");
+            revelaCorreta.classList.add("btn-success");
         }
         
             const otherBtns = document.querySelectorAll(".btn-light");
@@ -58,7 +64,7 @@ function carregarQuestao() {
                 btn.disabled = true;
             }
         
-            setTimeout(proxQuestao, 1000)
+            setTimeout(proxQuestao, 1000);
 
     });
 })
@@ -67,7 +73,8 @@ function carregarQuestao() {
 
 
 function proxQuestao() {
-    if(questAtual < questoes.length - 1){
+    if(questCount < 9){
+        questCount++;
         questAtual++;
         carregarQuestao();
     }else{
@@ -91,6 +98,7 @@ btnReiniciar.addEventListener("click", () => {
     divQuestoes.style.display = 'block';
     divFinal.style.display = "none";
     questAtual = 0;
-    respCorretas = 0;    
+    respCorretas = 0;
+    questCount = 0;    
     carregarQuestao();
 })
