@@ -1,18 +1,14 @@
 import questoes, {  } from "./questoes.js";
+import gerar_num from "./gerar_num.js";
 
-//const main = document.querySelector("main");
 const inicio = document.querySelector(".inicio");
 const btnIniciar = document.getElementById("iniciar");
-//const questao = document.getElementById("questao");
-//const numQuestao = document.getElementById("num-questao");
-// const alternativas = document.querySelector(".alternativas");
-//const anterior = document.getElementById("anterior");
-//const seguinte = document.getElementById("seguinte");
 const divQuestoes = document.querySelector(".questoes");
 const divFinal = document.querySelector(".final");
 const btnReiniciar = document.getElementById("reiniciar")
 
 let questCount = 0;
+let i = gerar_num();
 let questAtual = 0;
 let respCorretas = 0;
 
@@ -25,8 +21,7 @@ btnIniciar.addEventListener("click", () => {
 
 function carregarQuestao() {
     divQuestoes.style.display = "flex";
-    //questAtual = 0;
-    const item = questoes[questAtual];
+    const item = questoes[i[0 + questAtual]];
     divQuestoes.innerHTML = `<h3 class="text-center num-questao">Questão ${questCount + 1} de 10</h3>
                              <h4 class="questao">${item.questao}</h4>`;
     const divAlternativas = document.createElement("div");
