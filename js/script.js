@@ -82,7 +82,7 @@ let textoFinal;
 function resultado(){
     textoFinal = document.createElement("h4"); 
     textoFinal.className = "text-center";
-    textoFinal.innerHTML= `Você acertou ${respCorretas} de ${questoes.length}!`
+    textoFinal.innerHTML= `Você acertou ${respCorretas} de 10!`
     divFinal.insertBefore(textoFinal, btnReiniciar);
     divQuestoes.style.display = 'none';
     divFinal.style.display = "flex";

@@ -82,7 +82,7 @@ export default [
   {
     questao: `Qual é o maior animal terrestre do mundo?`,
     alternativas: [
-      { opcao:"Gorila.", correto: false},
+      { opcao:"Gorila", correto: false},
       { opcao:"Elefante Africano", correto: true},
       { opcao:"Girafa", correto: false},
       { opcao:"Camelo", correto: false}
@@ -92,46 +92,110 @@ export default [
   {
     questao: `Quais são os quatro elementos da natureza na filosofia antiga?`,
     alternativas: [
-      { opcao:"Terra, Água, Raio e Fogo.", correto: false},
+      { opcao:"Terra, Água, Raio e Fogo", correto: false},
       { opcao:"Poeira, Água, Ar e Fogo", correto: false},
       { opcao:"Terra, Água, Ar e Fogo", correto: true},
       { opcao:"Terra, Madeira, Ar e Fogo", correto: false}
     ]
   },
+
+  {
+    questao: `Qual é o maior planeta do nosso sistema solar?`,
+    alternativas: [
+      { opcao:"Terra", correto: false},
+      { opcao:"Marte", correto: false},
+      { opcao:"Netuno", correto: false},
+      { opcao:"Júpiter", correto: true}
+    ]
+  },
+
+  {
+    questao: `Quem foi o autor da famosa peça de teatro "Romeu e Julieta"?`,
+    alternativas: [
+      { opcao:"Arthur Miller", correto: false},
+      { opcao:"William Shakespeare", correto: true},
+      { opcao:"Samuel Beckett", correto: false},
+      { opcao:"Christopher Marlowe", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é a capital do Canadá?`,
+    alternativas: [
+      { opcao:"Ottawa", correto: true},
+      { opcao:"Ontario", correto: false},
+      { opcao:"Vancouver", correto: false},
+      { opcao:"Quebec", correto: false}
+    ]
+  },
+
+  {
+    questao: `Quem foi o primeiro homem a pisar na lua?`,
+    alternativas: [
+      { opcao:"Neil Armstrong", correto: true},
+      { opcao:"Iuri Gagarin", correto: false},
+      { opcao:"John Young", correto: false},
+      { opcao:"Alan Shepard", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é o rio mais longo do mundo?`,
+    alternativas: [
+      { opcao:"Rio Lena", correto: false},
+      { opcao:"Rio Nilo", correto: true},
+      { opcao:"Rio Amazonas", correto: false},
+      { opcao:"Rio Congo", correto: false}
+    ]
+  },
+
+  {
+    questao: `Em que ano ocorreu a queda do Muro de Berlim?`,
+    alternativas: [
+      { opcao:"1981", correto: false},
+      { opcao:"1985", correto: false},
+      { opcao:"1992", correto: false},
+      { opcao:"1989", correto: true}
+    ]
+  },
+
+  {
+    questao: `Qual é o elemento químico mais abundante na crosta terrestre?`,
+    alternativas: [
+      { opcao:"Gás Carbônico", correto: false},
+      { opcao:"Oxigênio", correto: true},
+      { opcao:"Metano", correto: false},
+      { opcao:"Hidrogênio", correto: false}
+    ]
+  },
+
+  {
+    questao: `Quem pintou a Mona Lisa?`,
+    alternativas: [
+      { opcao:"Van Gogh", correto: false},
+      { opcao:"Leonardo da Vinci", correto: true},
+      { opcao:"Pablo Picasso", correto: false},
+      { opcao:"Henri Matisse", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é a moeda oficial do Japão?`,
+    alternativas: [
+      { opcao:"Yuan", correto: false},
+      { opcao:"Iene", correto: true},
+      { opcao:"Won", correto: false},
+      { opcao:"Riel", correto: false}
+    ]
+  },
+
+  {
+    questao: `Quais são as cores primárias no sistema de cores aditivas (RGB)?`,
+    alternativas: [
+      { opcao:"Ciano, Magenta e Amarelo", correto: false},
+      { opcao:"Roxo, Marrom e Laranja", correto: false},
+      { opcao:"Vermelho, Verde e Azul", correto: true},
+      { opcao:"Rosa, Verde e Branco", correto: false}
+    ]
+  },
 ];
-/*
-export default [
-    {
-      question: "Quanto é 1 + 2?",
-      answers: [
-        { option: "3", correct: true },
-        { option: "2", correct: false },
-        { option: "4", correct: false },
-      ],
-    },
-    {
-      question: "Quanto é 5 x 2?",
-      answers: [
-        { option: "9", correct: false },
-        { option: "10", correct: true },
-        { option: "11", correct: false },
-      ],
-    },
-    {
-      question: "Quanto é 10 x 8?",
-      answers: [
-        { option: "800", correct: false },
-        { option: "90", correct: false },
-        { option: "80", correct: true },
-      ],
-    },
-    {
-      question: "Quanto é 7 x 7?",
-      answers: [
-        { option: "70", correct: false },
-        { option: "56", correct: false },
-        { option: "49", correct: true },
-      ],
-    },
-  ];
-  */
