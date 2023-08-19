@@ -172,7 +172,7 @@ export default [
   {
     questao: `Quem pintou a Mona Lisa?`,
     alternativas: [
-      { opcao:"Van Gogh", correto: false},
+      { opcao:"Vincent Van Gogh", correto: false},
       { opcao:"Leonardo da Vinci", correto: true},
       { opcao:"Pablo Picasso", correto: false},
       { opcao:"Henri Matisse", correto: false}
@@ -196,6 +196,106 @@ export default [
       { opcao:"Roxo, Marrom e Laranja", correto: false},
       { opcao:"Vermelho, Verde e Azul", correto: true},
       { opcao:"Rosa, Verde e Branco", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é a montanha mais alta do mundo?`,
+    alternativas: [
+      { opcao:"Aconcágua", correto: false},
+      { opcao:"Monte Everest", correto: true},
+      { opcao:"Kilimanjaro", correto: false},
+      { opcao:"Monte Fuji", correto: false}
+    ]
+  },
+
+  {
+    questao: `Quem escreveu a peça de teatro "Hamlet"?`,
+    alternativas: [
+      { opcao:"Gil Vicente", correto: false},
+      { opcao:"Bertolt Brecht ", correto: false},
+      { opcao:"Molière", correto: false},
+      { opcao:"William Shakespeare", correto: true}
+    ]
+  },
+
+  {
+    questao: `Qual é o processo pelo qual as plantas produzem seu próprio alimento usando luz solar?`,
+    alternativas: [
+      { opcao:"Fotossíntese", correto: true},
+      { opcao:"Refração ", correto: false},
+      { opcao:"Transpiração", correto: false},
+      { opcao:"Fertilização", correto: false}
+    ]
+  },
+
+  {
+    questao: `Quem pintou a obra "A Noite Estrelada"?`,
+    alternativas: [
+      { opcao:"Vincent Van Gogh", correto: true},
+      { opcao:"Tarsila do Amaral ", correto: false},
+      { opcao:"Pablo Picasso", correto: false},
+      { opcao:"Henri Matisse", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é o maior oceano do mundo?`,
+    alternativas: [
+      { opcao:"Oceano Índico", correto: false},
+      { opcao:"Oceano Glacial", correto: false},
+      { opcao:"Oceano Pacífico", correto: true},
+      { opcao:"Oceano Atlântico", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é o metal mais abundante na crosta terrestre?`,
+    alternativas: [
+      { opcao:"Chumbo", correto: false},
+      { opcao:"Alumínio", correto: true},
+      { opcao:"Aço", correto: false},
+      { opcao:"Cobre", correto: false}
+    ]
+  },
+
+  {
+    questao: `Quem foi o fundador da Microsoft?`,
+    alternativas: [
+      { opcao:"Steve Jobs", correto: false},
+      { opcao:"Bill Gates", correto: true},
+      { opcao:"Elon Musk", correto: false},
+      { opcao:"Mark Zuckerberg", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é a maior lua de Júpiter?`,
+    alternativas: [
+      { opcao:"Europa", correto: false},
+      { opcao:"Io", correto: false},
+      { opcao:"Ganimedes", correto: true},
+      { opcao:"Calisto", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é o processo natural pelo qual a Terra perde calor na forma de radiação infravermelha?`,
+    alternativas: [
+      { opcao:"Erosão", correto: false},
+      { opcao:"Pressão Atmosférica", correto: false},
+      { opcao:"Radiação Térmica", correto: true},
+      { opcao:"Sedimentação", correto: false}
+    ]
+  },
+
+  {
+    questao: `Qual é a primeira letra do alfabeto grego?`,
+    alternativas: [
+      { opcao:"Sigma", correto: false},
+      { opcao:"Bera", correto: false},
+      { opcao:"Ômega", correto: false},
+      { opcao:"Alfa", correto: true}
     ]
   },
 ];
