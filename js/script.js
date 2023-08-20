@@ -96,4 +96,7 @@ btnReiniciar.addEventListener("click", () => {
     respCorretas = 0;
     questCount = 0;    
     carregarQuestao();
+    i = gerar_num();
 })
+
+
