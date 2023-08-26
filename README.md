@@ -1,6 +1,6 @@
 # To-Do-List
 
-## Quiz-App.
+## Quiz-App
 
 <br>
 
@@ -11,6 +11,7 @@ Status: Concluído. Sujeito à atualizações.
 Pré-requisito: Navegador atualizado.
 
 <br>
+
 ## Sumário
 
 - [Sobre](#Sobre)
