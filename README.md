@@ -1,6 +1,6 @@
-# To-Do-List
+# Quiz-App
 
-## Quiz-App
+## Jogo de Perguntas e Respostas
 
 <br>
 
