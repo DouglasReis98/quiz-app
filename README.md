@@ -83,6 +83,6 @@ Projeto de aplicação de um jogo de perguntas e respostas que exibe o resultado
 - URL da Página: [Click here](https://douglasreis98.github.io/quiz-app/)
 
 ## Autor
-- Website - [Douglas Reis](http://douglasreis.epizy.com)
+- Website - [Douglas Reis](https://douglasreis.vercel.app)
 - Frontend Mentor - [@DouglasReis98](https://www.frontendmentor.io/profile/DouglasReis98)
 - LinkedIn - [@douglas-reis98](https://www.linkedin.com/in/douglas-reis98/)
